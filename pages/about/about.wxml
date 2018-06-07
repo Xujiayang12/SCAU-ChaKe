@@ -1,0 +1,16 @@
+<!--pages/about/about.wxml-->
+<view class='container'>
+<scroll-view class='scro' scroll-x>
+<image src="/src/about2.png" class='aboutpic'></image>
+<image src="/src/about.jpg" class='aboutpic'></image>
+</scroll-view>
+<text style='font-weight:bold;font-size:60rpx'>华农查课</text>
+<text style='font-size:40rpx'>信科1班 专属</text>
+</view>
+<view class="weui-footer">
+            <view class="weui-footer__links">
+                <navigator url="" class="weui-footer__link">SCAU17级信科1班</navigator>
+                <navigator url="https://github.com/Xujiayang12/SCAU-ChaKe" class="weui-footer__link">GitHub</navigator>
+            </view>
+            <view class="weui-footer__text">Copyright © 2018</view>
+        </view>

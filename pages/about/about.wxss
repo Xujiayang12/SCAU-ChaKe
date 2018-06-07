@@ -1,0 +1,23 @@
+/* pages/about/about.wxss */
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.aboutpic{
+  width: 375rpx;
+  height: 375rpx;
+  border-radius: 50%;
+  box-shadow: 3px 5px 3px #888888;
+}
+.scro{
+   width:390rpx;
+   height: 400rpx;
+   border-radius: 50%;
+   
+   white-space: nowrap;
+   display: flex;
+}

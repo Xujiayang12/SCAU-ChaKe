@@ -1,0 +1,74 @@
+<!--pages/detail.wxml-->
+<view hidden="{{hide}}">
+<view class="page">
+    <view class="page__hd">    
+        <view class="page__title" style='font-size: 26px;'>{{dapi.name}}</view>
+        <view class="page__desc" style='font-size: 19px;'>{{dapi.teacher}}</view>
+        <view class="page__desc">{{dapi.type == 'None' ?'':dapi.type}}</view>  
+    </view>
+  </view>
+  <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__label">平均分</view>
+                <view class="weui-form-preview__value_in-hd">{{dapi.avg}}</view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">学分</view>
+                    <view class="weui-form-preview__value">{{dapi.credit}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{dapi.college==''?'':'学院'}}</view>
+                    <view class="weui-form-preview__value">{{dapi.college==''?'':dapi.college}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{dapi.star==''?'':'评分'}}</view>
+                    <view class="weui-form-preview__value">{{dapi.star==''?'':dapi.star}}</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+            <view class="weui-progress">
+            <view class="weui-form-preview__label">90分以上</view>
+            <view class="weui-progress__bar">
+                <progress percent="{{bt90}}" stroke-width="6" show-info active/>
+            </view>
+            </view>
+            <view class="weui-progress">
+            <view class="weui-form-preview__label">80 ~ 90</view>
+            <view class="weui-progress__bar">
+                <progress percent="{{bt80}}" stroke-width="6" show-info active/>
+            </view>
+            </view>
+            <view class="weui-progress">
+            <view class="weui-form-preview__label">70 ~ 80</view>
+            <view class="weui-progress__bar">
+                <progress percent="{{bt70}}" stroke-width="6" show-info active color='#0099ff'/>
+            </view>
+            </view>
+            <view class="weui-progress">
+            <view class="weui-form-preview__label">60 ~ 70</view>
+            <view class="weui-progress__bar">
+                <progress percent="{{bt60}}" stroke-width="6" show-info active color='#0099ff'/>
+            </view>
+            </view>
+            <view class="weui-progress">
+            <view class="weui-form-preview__label">60分以下</view>
+            <view class="weui-progress__bar">
+                <progress percent="{{bl60}}" stroke-width="6" show-info active color='#cc3300'/>
+            </view>           
+            </view>
+            </view>
+            </view>
+
+<view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">评论</view>
+            <view class="weui-panel__bd">
+          
+                <view class="weui-media-box weui-media-box_text">
+                    <view class="weui-article__p"><text decode='<br>'>{{comments}}</text></view>
+                </view>
+            </view>
+            <view class="weui-panel__ft">
+            </view>
+        </view>
+</view>

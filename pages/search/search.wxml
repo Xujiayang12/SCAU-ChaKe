@@ -1,0 +1,58 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+<view style='padding: 30px 30px 15px 30px;'><text style='font-size:50rpx;'>课程搜索</text></view>
+  
+  <view class="page__bd">
+    <view class="weui-cells__title">请输入关键词</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="课程名称 或 老师名字" bindinput='tein'/>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title">其他选项</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">课程归属</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindtype" value="{{optionIndex}}" range="{{options}}">
+            <view class="weui-select weui-select_in-select-after">{{options[optionIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">平均分</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindavg" value="{{avgIndex}}" range="{{avgs}}">
+            <view class="weui-select weui-select_in-select-after">{{avgs[avgIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">评价</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindstar" value="{{starIndex}}" range="{{stars}}">
+            <view class="weui-select weui-select_in-select-after">{{stars[starIndex]}}</view>
+          </picker>
+        </view>
+      </view>
+       <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="评论关键词，如（论文，不点名等）" bindinput='plin'/>
+        </view>
+      </view>
+    </view>
+    
+
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="goto">确定</button>
+    </view>
+  </view>
+</view>
